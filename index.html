@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resume-container">
+        <!-- Header with Profile Picture -->
+        <div class="header">
+            <div class="profile-pic-container">
+                <img src="https://up.yimg.com/ib/th?id=OIP.H3Xxvz-5yotdS4Xr6SfnmwHaHa&pid=Api&rs=1&c=1&qlt=95&w=107&h=107" alt="Profile Picture" class="profile-pic" />
+            </div>
+            <div class="header-text">
+                <h1>Mohammad Furqan</h1>
+                <p>Web Developer</p>
+            </div>
+        </div>
+
+        <!-- Profile Section -->
+        <section class="profile">
+            <h2>Profile</h2>
+            <p>I am currently pursuing a Bachelor's degree in Computer Science at FUUAST... (Shortened for brevity)</p>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor In Computer Science</h3>
+                <p>FUUAST, 2022-2026</p>
+            </div>
+            <div class="education-item">
+                <h3>Web and App Development</h3>
+                <p>SMIT, 2021-2022</p>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="experience">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>SEO and WordPress</h3>
+                <p>Computer Educator, 2023</p>
+            </div>
+            <div class="experience-item">
+                <h3>Web Developer</h3>
+                <p>Digitech Infra Associate, 2024 - Present</p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <h2>Skills 
+                <button id="toggle-skills" class="toggle-btn">Hide Skills</button>
+            </h2>
+            <ul>
+                <li class="skill-item">
+                    <span>HTML</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 100%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <span>CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 80%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <span>JavaScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 60%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <span>TypeScript</span>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 60%;"></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <div class="footer">
+            <h2>Contact:</h2>
+            <div class="contact-item">
+                <img src="./images/gmail.png" alt="Email Icon">
+                <p>syedfurqan@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <img src="./images/smartphone-call.png" alt="Phone Icon">
+                <p>+92 3242742580</p>
+            </div>
+            <div class="contact-item">
+                <img src="./images/linkdin.png" alt="LinkedIn Icon">
+                <a href="https://www.linkedin.com/in/syed-furqan-bb5721256/" target="_blank">Syed Furqan</a>
+            </div>
+            <div class="contact-item">
+                <img src="./images/user.png" alt="Portfolio Icon">
+                <a href="https://portfolio-mfurqan.netlify.app/" target="_blank">Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
