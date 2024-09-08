@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resume-container">
+        <form id="resume-form">
+            <h2>Fill Your Details</h2>
+
+            <!-- Personal Information Section -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" required>
+
+            <label for="profile-pic-upload">Upload Profile Picture:</label>
+            <input type="file" id="profile-pic-upload" accept="image/*">
+
+            <!-- Education Section -->
+            <label for="education">Education:</label>
+            <div id="education-container"></div>
+            <button type="button" id="add-education" class="add-btn">Add Education</button>
+
+            <!-- Work Experience Section -->
+            <label for="experience">Work Experience:</label>
+            <div id="experience-container"></div>
+            <button type="button" id="add-experience" class="add-btn">Add Experience</button>
+
+            <!-- Skills Section -->
+            <label for="skills">Skills:</label>
+            <div id="skills-container"></div>
+            <button type="button" id="add-skill" class="add-btn">Add Skill</button>
+
+            <!-- Personal Information Section -->
+            <label class="personal-info" for="personal-info">Personal Info:</label>
+            <textarea id="personal-info" rows="4"></textarea>
+
+            <!-- Skill Level Section -->
+            <label for="skill-level">Skill Level:</label>
+            <select id="skill-level">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" required>
+
+            <label for="linkedin">LinkedIn:</label>
+            <input type="url" id="linkedin">
+
+            <label for="portfolio">Portfolio:</label>
+            <input type="url" id="portfolio">
+
+            <button type="submit" class="submit-btn">Generate Resume</button>
+        </form>
+
+        <!-- Generated Resume Section -->
+        <div id="generated-resume" class="generated-resume" style="display:none;">
+            <div class="header">
+                <div class="profile-pic-container">
+                    <img id="profile-pic-preview" src="" alt="Profile Picture" class="profile-pic">
+                </div>
+                <div class="header-text">
+                    <h1 id="name-display">[Your Name]</h1>
+                    <p id="job-title-display">[Your Job Title]</p>
+                </div>
+            </div>
+
+            <section class="profile">
+                <h2>Profile</h2>
+                <p id="personal-info-display"></p>
+            </section>
+
+            <section class="education">
+                <h2>Education</h2>
+                <ul id="education-list"></ul>
+            </section>
+
+            <section class="experience">
+                <h2>Work Experience</h2>
+                <ul id="experience-list"></ul>
+            </section>
+
+            <section class="skills">
+                <h2>Skills</h2>
+                <ul id="skills-list"></ul>
+            </section>
+
+            <div class="footer">
+                <h2>Contact:</h2>
+                <div class="contact-item">
+                    <img src="./images/gmail.png" alt="Email Icon">
+                    <p id="email-display"></p>
+                </div>
+                <div class="contact-item">
+                    <img src="./images/smartphone-call.png" alt="Phone Icon">
+                    <p id="phone-display"></p>
+                </div>
+                <div class="contact-item">
+                    <img src="./images/linkdin.png" alt="LinkedIn Icon">
+                    <a id="linkedin-display" href="#" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <img src="./images/user.png" alt="Portfolio Icon">
+                    <a id="portfolio-display" href="#" target="_blank">Portfolio</a>
+                </div>
+                <button type="button" id="edit-btn" class="edit-btn" style="display:none;">Edit Resume</button>
+                <button type="button" id="download-btn" class="submit-btn">Download PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
